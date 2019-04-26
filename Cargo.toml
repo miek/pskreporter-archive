@@ -1,0 +1,10 @@
+[package]
+name = "pskreporter-archive"
+version = "0.1.0"
+authors = ["Mike Walters <mike@flomp.net>"]
+edition = "2018"
+
+[dependencies]
+serde = "*"
+serde_derive = "*"
+serde-xml-rs = "*"
