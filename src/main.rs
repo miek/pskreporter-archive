@@ -3,6 +3,8 @@ extern crate serde_derive;
 extern crate serde;
 extern crate serde_xml_rs;
 
+use chrono::{DateTime, Utc};
+use chrono::serde::ts_seconds;
 use serde_xml_rs::from_reader;
 
 #[derive(Debug, Deserialize)]
@@ -18,7 +20,8 @@ struct ReceptionReport {
     pub sender_callsign: String,
     pub sender_locator: String,
     pub frequency: u64,
-    pub flow_start_seconds: u64,
+    #[serde(with = "ts_seconds", rename = "flowStartSeconds")]
+    pub timestamp: DateTime<Utc>,
     pub mode: String,
     pub is_sender: u8,
     pub is_receiver: u8,
