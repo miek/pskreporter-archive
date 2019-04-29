@@ -32,8 +32,8 @@ struct ReceptionReport {
     #[serde(with = "ts_seconds", rename = "flowStartSeconds")]
     pub timestamp: NaiveDateTime,
     pub mode: String,
-    pub is_sender: i32,
-    pub is_receiver: i32,
+    pub is_sender: bool,
+    pub is_receiver: bool,
     pub sender_region: String,
     #[serde(rename = "senderDXCC")]
     pub sender_dxcc: String,

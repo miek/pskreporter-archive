@@ -9,4 +9,4 @@ chrono = { version = "*", features = ["serde"] }
 diesel = { version = "*", features = ["chrono", "sqlite"] }
 serde = "*"
 serde_derive = "*"
-serde-xml-rs = "*"
+serde-xml-rs = { git = "https://github.com/RReverser/serde-xml-rs.git" }
