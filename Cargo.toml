@@ -6,6 +6,7 @@ edition = "2018"
 
 [dependencies]
 chrono = { version = "*", features = ["serde"] }
+diesel = { version = "*", features = ["chrono", "sqlite"] }
 serde = "*"
 serde_derive = "*"
 serde-xml-rs = "*"
